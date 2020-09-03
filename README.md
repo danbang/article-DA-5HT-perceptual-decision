@@ -4,7 +4,7 @@ This repository contains anonymised behavioural and neural data and code support
 
 Bang*, Kishida*, Lohrenz, White, Laxton, Tatter, Fleming & Montague (2020) “Sub-second dopamine and serotonin signalling in human striatum during perceptual decision-making” Neuron
 
-FigureX.m files will generate the specified plots and associated statistical analyses.
+FigureX.m files will generate the requested plot and associated statistical analysis.
 
 The paths in these scripts require altering the directory variable ‘repoBase’ to point to your local version of the repository.
 
