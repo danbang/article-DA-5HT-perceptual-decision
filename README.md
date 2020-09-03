@@ -1,8 +1,8 @@
 # article-DA-5HT-perceptual-decision
 
-This repository contains anonymised behavioural and neural data and code supporting:
+This repository contains anonymised behavioural and neurochemical data and code supporting:
 
-Bang*, Kishida*, Lohrenz, White, Laxton, Tatter, Fleming & Montague (2020) “Sub-second dopamine and serotonin signalling in human striatum during perceptual decision-making” Neuron
+Bang*, Kishida*, Lohrenz, White, Laxton, Tatter, Fleming & Montague (Year) “Sub-second dopamine and serotonin signalling in human striatum during perceptual decision-making” Journal
 
 FigureX.m files will generate the requested plot and associated statistical analysis.
 
