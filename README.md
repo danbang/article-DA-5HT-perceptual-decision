@@ -7,3 +7,5 @@ Bang*, Kishida*, Lohrenz, White, Laxton, Tatter, Fleming & Montague (Year) “Su
 FigureX.m files will generate the requested plot and associated statistical analysis.
 
 The paths in these scripts require altering the directory variable ‘repoBase’ to point to your local version of the repository.
+
+This data/code is being released with a permissive open-source license. You should feel free to use or adapt the code as long as you follow the terms of the license. If you make use of the data/code, we would appreciate that you cite the paper.
