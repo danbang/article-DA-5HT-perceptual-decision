@@ -104,6 +104,34 @@ for i_nm = 1:length(nm)
     end
     rtdist(i_sbj,:)= tmp./sum(tmp);
     
+    % Compute RT distribution: correct trials
+    step= 250;
+    bins= 0:step:5000;
+    cat= [];
+    tmp= [];
+    rtz= data.rt1(include==1&data.acc==1);
+    for t= 1:length(rtz); 
+        cat(t)= sum(rtz(t) > bins); 
+    end
+    for i= 1:length(bins);
+        tmp(i)= sum(cat==i);
+    end
+    rtdist_C(i_sbj,:)= tmp./sum(tmp);
+    
+     % Compute RT distribution: error trials
+    step= 250;
+    bins= 0:step:5000;
+    cat= [];
+    tmp= [];
+    rtz= data.rt1(include==1&data.acc==0);
+    for t= 1:length(rtz); 
+        cat(t)= sum(rtz(t) > bins); 
+    end
+    for i= 1:length(bins);
+        tmp(i)= sum(cat==i);
+    end
+    rtdist_W(i_sbj,:)= tmp./sum(tmp);
+    
     end
     
 end
@@ -261,7 +289,7 @@ plot([0 winL],[0 0],'k-','LineWidth',lw); hold on
 plot([1.1 1.1]./rate,[-1 +1],'k-','LineWidth',lw/2); hold on
 plot([1.1+motionL(i_sbj) 1.1+motionL(i_sbj)]./rate,[-1 +1],'k-','LineWidth',lw/2); hold on
 % Plot RT distribution
-bar(linspace(21+motionL(i_sbj),55,length(bins)),rtdist(i_sbj,:).*.40,'linewidth',.5,'Facecolor','m','Edgecolor','w','FaceAlpha',.6); hold on;
+bar(linspace((1.1+motionL(i_sbj)+step/1e3/2)/rate,(1.1+motionL(i_sbj)+step/1e3/2+5)/rate,length(bins)),rtdist_W(i_sbj,:).*.60,'linewidth',.5,'Facecolor','m','Edgecolor','w','FaceAlpha',.6); hold on;
 % Add reference lines
 plot([0 winL],[0 0],'k-','LineWidth',lw); hold on
 % Plot average time series
@@ -323,7 +351,7 @@ plot([0 winL],[0 0],'k-','LineWidth',lw); hold on
 plot([1.1 1.1]./rate,[-1 +1],'k-','LineWidth',lw/2); hold on
 plot([1.1+motionL(i_sbj) 1.1+motionL(i_sbj)]./rate,[-1 +1],'k-','LineWidth',lw/2); hold on
 % Plot RT distribution
-bar(linspace(21+motionL(i_sbj),55,length(bins)),rtdist(i_sbj,:).*.40,'linewidth',.5,'Facecolor','m','Edgecolor','w','FaceAlpha',.6); hold on;
+bar(linspace((1.1+motionL(i_sbj)+step/1e3/2)/rate,(1.1+motionL(i_sbj)+step/1e3/2+5)/rate,length(bins)),rtdist_C(i_sbj,:).*.60,'linewidth',.5,'Facecolor','m','Edgecolor','w','FaceAlpha',.6); hold on;
 % Add reference lines
 plot([0 winL],[0 0],'k-','LineWidth',lw); hold on
 % Plot average time series
