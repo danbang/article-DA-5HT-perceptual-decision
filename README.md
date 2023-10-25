@@ -2,7 +2,7 @@
 
 This repository contains anonymised data and code supporting:
 
-<a href="https://www.cell.com/neuron/fulltext/S0896-6273(20)30715-7">Bang*, Kishida*, Lohrenz, White, Laxton, Tatter, Fleming & Montague (2020) “Sub-second dopamine and serotonin signalling in human striatum during perceptual decision-making” Neuron</a>
+<a href="https://www.cell.com/neuron/fulltext/S0896-6273(20)30715-7">Bang et al. (2020) “Sub-second dopamine and serotonin signalling in human striatum during perceptual decision-making” Neuron</a>
 
 FigureX.m files will generate the requested plots and associated statistical analyses.
 
