@@ -8,4 +8,6 @@ FigureX.m files will generate the requested plots and associated statistical ana
 
 The paths in these scripts require altering the directory variable ‘repoBase’ to point to your local version of the repository.
 
+The raw (time-corrected) current responses are available on OSF: https://osf.io/qyv9b/overview.
+
 This code is being released with a permissive open-source license. You should feel free to use or adapt the code as long as you follow the terms of the license. If you make use of the code, we would appreciate that you cite the paper.
